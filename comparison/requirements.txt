@@ -1,0 +1,18 @@
+# ── Depression Detection from Speech — Requirements ──
+# Install on Kaggle: !pip install -r requirements.txt
+# For Streamlit deployment: pin these in requirements.txt
+ 
+streamlit>=1.32.0
+librosa>=0.10.1
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+imbalanced-learn>=0.11.0
+joblib>=1.3.0
+soundfile>=0.12.1
+matplotlib>=3.7.0
+seaborn>=0.12.0
+audioread>=3.0.0
+resampy>=0.4.2
+ 

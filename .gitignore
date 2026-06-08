@@ -1,0 +1,76 @@
+# =====================
+# Python & OS
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.wav
+*.mp3
+*.flac
+*.keras
+*.h5
+*.pth
+*.npy
+
+# =====================
+# Virtual Environments
+# =====================
+.venv/
+venv/
+env/
+
+# =====================
+# Logs
+# =====================
+*.log
+logs/
+wandb/
+tensorboard/
+
+# =====================
+# Model Artifacts — KEEP .pkl for deployment
+# =====================
+*.joblib
+*.pt
+*.ckpt
+*.onnx
+*.npz
+
+# =====================
+# Comparison Project
+# =====================
+comparison/__pycache__/
+.vscode/
+
+# =====================
+# Multimodal Project
+# =====================
+automated_depression_detection_daic_woz/artifacts/
+automated_depression_detection_daic_woz/__pycache__/
+
+# =====================
+# DAIC-WOZ Dataset
+# =====================
+
+depression_project_backup_audio_only/
+DAIC_WOZ/
+
+# =====================
+# Streamlit Cache
+# =====================
+.streamlit/cache/
+
+# =====================
+# Environment files
+# =====================
+.env
+.env.*
+# DAIC-WOZ transcript and label files
+*_TRANSCRIPT.csv
+*_TRANSCRIPT*
+multimodal/Final Multimodal Depression Detection model/automated_depression_detection_daic_woz/DAIC_WOZ/
+multimodal/Final Multimodal Depression Detection model/automated_depression_detection_daic_woz/artifacts/cache/

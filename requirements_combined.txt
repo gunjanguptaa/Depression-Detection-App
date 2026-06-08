@@ -1,0 +1,35 @@
+# ── Core ────────────────────────────────────────────────────
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10
+joblib>=1.3
+
+# ── Audio ───────────────────────────────────────────────────
+librosa>=0.10
+soundfile>=0.12
+audioread>=3.0
+resampy>=0.4
+
+# ── ML Models ───────────────────────────────────────────────
+xgboost>=2.0
+imbalanced-learn>=0.11
+tensorflow>=2.15
+
+# ── Visualization ───────────────────────────────────────────
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.18
+
+# ── Streamlit ───────────────────────────────────────────────
+streamlit>=1.39
+
+# ── Multimodal (NLP + Whisper) ──────────────────────────────
+sentence-transformers>=2.2
+openai-whisper>=20231117
+torch>=2.0
+transformers>=4.30
+
+# ── Utilities ───────────────────────────────────────────────
+PyYAML>=6.0
+kaggle>=1.6
