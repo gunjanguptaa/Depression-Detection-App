@@ -16,3 +16,5 @@ sentence-transformers>=2.2
 openai-whisper>=20231117
 faster-whisper>=0.8
 torch>=2.0
+xgboost>=2.0
+imbalanced-learn>=0.11
