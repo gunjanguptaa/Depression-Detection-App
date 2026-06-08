@@ -143,7 +143,10 @@ elif mode == "📊 Classical ML Models":
 
 # ── MODULE 2: MULTIMODAL ─────────────────────────────────────
 elif mode == "🤖 Multimodal (LSTM + Attention)":
-    multimodal_path = os.path.dirname(os.path.abspath(__file__))
+    multimodal_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    'multimodal'
+    )
 
     if multimodal_path not in sys.path:
         sys.path.insert(0, multimodal_path)
