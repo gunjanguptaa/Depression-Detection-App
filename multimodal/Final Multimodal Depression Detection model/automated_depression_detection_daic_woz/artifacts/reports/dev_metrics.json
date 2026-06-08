@@ -1,0 +1,12 @@
+{
+  "split": "dev",
+  "threshold": 0.65,
+  "accuracy": 0.6142857142857143,
+  "roc_auc": 0.6149355877616747,
+  "non_depressed_precision": 0.6706586826347305,
+  "non_depressed_recall": 0.8115942028985508,
+  "non_depressed_f1": 0.7344262295081967,
+  "depressed_precision": 0.3953488372093023,
+  "depressed_recall": 0.2361111111111111,
+  "depressed_f1": 0.2956521739130435
+}

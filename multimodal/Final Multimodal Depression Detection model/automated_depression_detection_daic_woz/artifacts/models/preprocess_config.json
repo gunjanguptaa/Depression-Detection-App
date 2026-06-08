@@ -1,0 +1,20 @@
+{
+  "features": {
+    "sample_rate": 16000,
+    "n_mfcc": 40,
+    "n_fft": 1024,
+    "hop_length": 512,
+    "win_length": 1024,
+    "fixed_frames": 600,
+    "segment_seconds": 20,
+    "max_segments_per_file": 6,
+    "segment_stride_seconds": 20,
+    "normalize_audio": true,
+    "trim_silence": false,
+    "use_delta": true,
+    "use_delta_delta": true
+  },
+  "training": {
+    "threshold": 0.5
+  }
+}
