@@ -36,22 +36,6 @@ The Streamlit app has **three modules** selectable from the sidebar:
 | 🤖 **Classical ML Models** | Upload or record audio → predictions from 5 traditional ML models with comparison charts |
 | 🔮 **Multimodal (LSTM + Attention)** | Upload or record audio + transcript → deep learning prediction with attention heatmap and Grad-CAM |
 
-### Screenshots
-
-**Home — Full Suite Dashboard**
-
-![Home page showing Module 1 and Module 2 overview](screenshots/home.png)
-
-**Classical ML — Analyse a Speech Sample**
-
-![Classical ML module with record/upload and model selection](screenshots/classical_ml.png)
-
-**Multimodal — Audio + Text Prediction**
-
-![Multimodal module with upload, transcript input, and Whisper transcription](screenshots/multimodal.png)
-
----
-
 ## 🤖 Module 1 — Classical ML Models
 
 Compares **5 traditional ML models** trained on a **194-dimensional acoustic feature vector** extracted from each audio file.
