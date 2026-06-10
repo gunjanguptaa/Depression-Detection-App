@@ -152,7 +152,7 @@ def main(config_path=None, overwrite_cache=False):
     lr = float(cfg["training"].get("learning_rate", 3e-4))
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode="min", factor=0.5, patience=3, min_lr=1e-6, verbose=True
+        optimizer, mode="min", factor=0.5, patience=3, min_lr=1e-6
     )
     criterion = nn.BCELoss()
 
