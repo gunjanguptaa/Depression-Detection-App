@@ -187,7 +187,6 @@ Full metrics are in `plots/results_summary.csv`.
 ## 🗂️ Folder Structure
 
 ```
-```
 depression-detection/
 ├── .devcontainer/
 │   └── devcontainer.json
@@ -294,7 +293,7 @@ depression-detection/
 ├── README.md
 └── requirements.txt
 ```
----
+
 
 ## ⚙️ Setup & Installation
 
