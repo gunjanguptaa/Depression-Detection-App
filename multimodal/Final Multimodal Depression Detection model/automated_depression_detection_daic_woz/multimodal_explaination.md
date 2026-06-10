@@ -25,8 +25,6 @@ DAIC_WOZ/
         └── test_split_Depression_AVEC2017.csv
 ```
 
-The included ZIP contains the complete code and the required dataset folders. The actual 5.75 GB WAV/CSV dataset is not bundled in this generated package because only a screenshot was provided in chat, not the full Kaggle dataset files.
-
 ## What This Project Includes
 
 - Audio feature extraction from speech signals using MFCC, delta, and delta-delta features.
@@ -193,11 +191,6 @@ automated_depression_detection_daic_woz/
     └── reports/
 ```
 
-## Notes for Placement/Interview Explanation
-
-You can explain the project like this:
-
-> I built an automated depression detection system from speech signals using the DAIC-WOZ dataset. First, audio files are converted into MFCC-based time-series features. Then a CNN layer extracts local speech patterns, BiLSTM captures long-term temporal dependencies, and an attention mechanism highlights important time frames. The final sigmoid layer outputs the probability of depression. I also deployed the model with Streamlit, where users can upload or record audio and see depressed/non-depressed probabilities along with ROC curve, confusion matrix, training curves, attention heatmaps, and Grad-CAM style explanations.
 
 ## Practical Limitations
 
