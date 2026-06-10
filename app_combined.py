@@ -14,6 +14,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Base directory — folder containing app_combined.py
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # ── SIDEBAR NAVIGATION ───────────────────────────────────────
 with st.sidebar:
     st.title("🧠 Depression Detection")
@@ -113,28 +116,31 @@ if mode == "🏠 Home":
 
 # ── MODULE 1: CLASSICAL ML ───────────────────────────────────
 elif mode == "📊 Classical ML Models":
-    # Add comparison project to path
-    comparison_path = os.path.join(os.path.dirname(__file__), 'comparison')
+    comparison_path = os.path.join(BASE_DIR, 'comparison')
+
+    if not os.path.exists(comparison_path):
+        st.error(f'Comparison folder not found at: {comparison_path}')
+        st.stop()
+
     if comparison_path not in sys.path:
         sys.path.insert(0, comparison_path)
 
-    # Change working directory so relative paths (models/, plots/) work
     original_dir = os.getcwd()
     os.chdir(comparison_path)
 
     try:
-        # Dynamically load and execute the comparison app
         import importlib.util
+        import unittest.mock as mock
+
         spec = importlib.util.spec_from_file_location(
             "comparison_app",
             os.path.join(comparison_path, "app.py")
         )
         module = importlib.util.module_from_spec(spec)
 
-        # Override set_page_config since we already called it
-        import unittest.mock as mock
         with mock.patch('streamlit.set_page_config'):
             spec.loader.exec_module(module)
+
     except Exception as e:
         st.error(f"Error loading Classical ML module: {e}")
         st.exception(e)
@@ -144,11 +150,15 @@ elif mode == "📊 Classical ML Models":
 # ── MODULE 2: MULTIMODAL ─────────────────────────────────────
 elif mode == "🤖 Multimodal (LSTM + Attention)":
     multimodal_path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)),
+        BASE_DIR,
         'multimodal',
         'Final Multimodal Depression Detection model',
         'automated_depression_detection_daic_woz'
     )
+
+    if not os.path.exists(multimodal_path):
+        st.error(f'Multimodal folder not found at: {multimodal_path}')
+        st.stop()
 
     if multimodal_path not in sys.path:
         sys.path.insert(0, multimodal_path)
@@ -156,7 +166,7 @@ elif mode == "🤖 Multimodal (LSTM + Attention)":
     original_dir = os.getcwd()
     os.chdir(multimodal_path)
 
-    # Set environment variable so ffmpeg is found regardless of context
+    # Inject ffmpeg into PATH for Whisper
     ffmpeg_path = r"C:\ffmpeg\bin"
     if ffmpeg_path not in os.environ.get("PATH", ""):
         os.environ["PATH"] = ffmpeg_path + os.pathsep + os.environ.get("PATH", "")
