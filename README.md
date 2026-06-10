@@ -439,13 +439,7 @@ artifacts/models/preprocess_config.json
 - Grad-CAM is adapted for 1D convolutions over time frames — it is an interpretability visualisation, not a clinical explanation.
 - No clinical validation has been performed. This system must not be used for any real-world diagnosis.
 
----
 
-## 🎤 Placement / Interview Explanation
-
-> "I built a full-suite depression detection system on the DAIC-WOZ dataset with two complementary approaches. The classical ML pipeline extracts a 194-dimensional acoustic feature vector — MFCCs, chroma, spectral features — and compares five models including Logistic Regression, SVM, Random Forest, XGBoost, and MLP. SVM with an RBF kernel achieved the best test AUC of 0.873. The multimodal PyTorch pipeline additionally encodes interview transcripts using Sentence-BERT and fuses audio and text representations through a CNN-BiLSTM with temporal attention, using Whisper for automatic transcription at inference time. I deployed everything as a three-module Streamlit app on Streamlit Cloud, with explainability through attention heatmaps, Grad-CAM, and feature importance charts."
-
----
 
 ## 📄 License
 
