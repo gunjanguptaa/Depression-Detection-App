@@ -1,12 +1,21 @@
 # Streamlit Deployment Guide
 
 ## Local deployment
-
+# 1. For running whole combined app
+```bash
+pip install -r requirements.txt
+streamlit run app_combined.py
+```
+# 2. for running only the multimodal app
+```bash
+pip install -r requirements.txt
+streamlit run app_multimodal.py
+```
+# 3. for running the audio only app
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
 ## Streamlit Community Cloud
 
 1. Push this project to GitHub.
@@ -14,11 +23,12 @@ streamlit run app.py
    - `best_attention_lstm.keras`
    - `feature_scaler.joblib`
    - `preprocess_config.json`
+   - 'best_multimodal_pt.pth'
 3. Do **not** push the full 5.75 GB DAIC-WOZ dataset to GitHub.
 4. On Streamlit Cloud, set the main file as:
 
 ```text
-app.py
+app_combined.py
 ```
 
 5. The app can perform inference only after trained artifacts are present.
