@@ -473,7 +473,7 @@ with tab3:
 with tab4:
     st.subheader('About This Project')
     st.markdown("""
-    ### NTCC Project: Automated Depression Detection from Speech
+    ### Automated Depression Detection from Speech
 
     **Dataset:** DAIC-WOZ (Distress Analysis Interview Corpus — Wizard of Oz)
     - Collected by USC Institute for Creative Technologies
